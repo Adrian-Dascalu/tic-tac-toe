@@ -1,0 +1,46 @@
+body{
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+.buttonb{
+    text-align:center;
+}
+
+.buttonc{
+    text-align:;
+}
+
+
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
+
+header{
+    background-color: rgb(14, 14, 172);
+    height: 100px;
+    text-align: center;
+    font-size: 35px;
+}
+
+nav{
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+main{
+    background-color: brown;
+    height: 600px;
+}
+
+footer{
+    background-color: bisque;
+    height: 20px;
+}
+
+#message-el {
+
+}
