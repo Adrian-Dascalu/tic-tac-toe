@@ -3,11 +3,11 @@ body{
 }
 
 .buttonb{
-    text-align:center;
+    text-align: center;
 }
 
 .buttonc{
-    text-align:;
+    text-align: center;
 }
 
 
@@ -20,7 +20,7 @@ body{
 
 header{
     background-color: rgb(14, 14, 172);
-    height: 100px;
+    height: 85px;
     text-align: center;
     font-size: 35px;
 }
