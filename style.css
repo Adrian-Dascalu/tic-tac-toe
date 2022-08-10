@@ -26,11 +26,18 @@ header{
 
 main{
     background-color: brown;
-    height: 300px;
+    height: 100px;
 }
 
 #message-el {
-    
+
+}
+
+#message-t {
+    font-size: 64px;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 5px;
 }
 
 #message-el-1 {

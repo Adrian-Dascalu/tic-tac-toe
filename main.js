@@ -6,6 +6,10 @@ let message = "";
 
 var c = [0,0,0,0,0,0,0,0,0,0];
 
+var messaget = document.getElementById("message-t");
+
+messaget.textContent = "X turn"
+
 function calcul(v) {
     if(v == 1)
     {
@@ -21,6 +25,8 @@ function calcul(v) {
 
                 c[1] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[1] == c[4]) && (c[1] == c[7])) || ((c[1] == c[5]) && (c[1] == c[9])))
                 {
                     victorie = 1;
@@ -34,6 +40,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[1] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[1] == c[4]) && (c[1] == c[7])) || ((c[1] == c[5]) && (c[1] == c[9])))
                 {
@@ -57,6 +65,8 @@ function calcul(v) {
 
                 c[2] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
                     victorie = 1;
@@ -70,6 +80,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[2] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
@@ -93,6 +105,8 @@ function calcul(v) {
 
                 c[3] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[3] == c[6]) && (c[3] == c[9])) || ((c[3] == c[5]) && (c[3] == c[7])))
                 {
                     victorie = 1;
@@ -106,6 +120,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[3] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[2]) && (c[1] == c[3])) || ((c[3] == c[6]) && (c[3] == c[9])) || ((c[3] == c[5]) && (c[3] == c[7])))
                 {
@@ -129,6 +145,8 @@ function calcul(v) {
 
                 c[4] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[4]) && (c[1] == c[7])) || ((c[4] == c[5]) && (c[4] == c[6])))
                 {
                     victorie = 1;
@@ -142,6 +160,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[4] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[4]) && (c[1] == c[7])) || ((c[4] == c[5]) && (c[4] == c[6])))
                 {
@@ -165,6 +185,8 @@ function calcul(v) {
 
                 c[5] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[5]) && (c[1] == c[9])) || ((c[3] == c[5]) && (c[3] == c[7])) || ((c[4] == c[5]) && (c[4] == c[6])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
                     victorie = 1;
@@ -178,6 +200,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[5] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[5]) && (c[1] == c[9])) || ((c[3] == c[5]) && (c[3] == c[7])) || ((c[4] == c[5]) && (c[4] == c[6])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
@@ -201,6 +225,8 @@ function calcul(v) {
 
                 c[6] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[4] == c[5]) && (c[4] == c[6])) || ((c[3] == c[6]) && (c[3] == c[9])))
                 {
                     victorie = 1;
@@ -214,6 +240,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[6] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[4] == c[5]) && (c[4] == c[6])) || ((c[3] == c[6]) && (c[3] == c[9])))
                 {
@@ -237,6 +265,8 @@ function calcul(v) {
 
                 c[7] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[4]) && (c[1] == c[7])) || ((c[7] == c[8]) && (c[7] == c[9])) || ((c[7] == c[5]) && (c[7] == c[3])))
                 {
                     victorie = 1;
@@ -250,6 +280,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[7] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[1] == c[4]) && (c[1] == c[7])) || ((c[7] == c[8]) && (c[7] == c[9])) || ((c[7] == c[5]) && (c[7] == c[3])))
                 {
@@ -273,6 +305,8 @@ function calcul(v) {
 
                 c[8] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[7] == c[8]) && (c[7] == c[9])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
                     victorie = 1;
@@ -286,6 +320,8 @@ function calcul(v) {
                 numar = 0;
 
                 c[8] = 2;
+
+                messaget.textContent = "X turn"
 
                 if (((c[7] == c[8]) && (c[7] == c[9])) || ((c[2] == c[5]) && (c[2] == c[8])))
                 {
@@ -309,6 +345,8 @@ function calcul(v) {
 
                 c[9] = 1;
 
+                messaget.textContent = "O turn"
+
                 if (((c[1] == c[5]) && (c[1] == c[9])) || ((c[7] == c[8]) && (c[7] == c[9])) || ((c[3] == c[6]) && (c[3] == c[9])))
                 {
                     victorie = 1;
@@ -323,6 +361,8 @@ function calcul(v) {
 
                 c[9] = 2;
 
+                messaget.textContent = "X turn"
+
                 if (((c[1] == c[5]) && (c[1] == c[9])) || ((c[7] == c[8]) && (c[7] == c[9])) || ((c[3] == c[6]) && (c[3] == c[9])))
                 {
                     victorie = 1;
@@ -334,7 +374,7 @@ function calcul(v) {
 
     if (victorie == 1)
     {
-        let messageEl = document.getElementById("message-e");
+        messageEl = document.getElementById("message-e");
 
         messageEl.textContent = message;
     }
