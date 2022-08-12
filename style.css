@@ -44,10 +44,10 @@ main{
 }
 
 #message-e {
-    font-size: 32px;
+    font-size: 25px;
     text-align: center;
     margin-top: auto;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 #message-t {
