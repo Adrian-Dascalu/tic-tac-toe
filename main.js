@@ -8,10 +8,47 @@ var c = [0,0,0,0,0,0,0,0,0,0];
 
 var messaget = document.getElementById("message-t");
 
-messaget.textContent = "X turn"
+messaget.textContent = "X turn";
+
+function restart() {
+    victorie = 0;
+    c = [0,0,0,0,0,0,0,0,0,0];
+    messaget.textContent = "X turn";
+    numar = 0;
+    
+    messageEl = document.getElementById("message-e");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-1");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-2");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-3");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-4");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-5");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-6");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-7");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-8");
+    messageEl.textContent = "";
+
+    messageEl = document.getElementById("message-el-9");
+    messageEl.textContent = "";
+}
 
 function calcul(v) {
-    if(v == 1)
+    if((v == 1) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-1");
 
@@ -51,7 +88,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 2)
+    else if((v == 2) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-2");
 
@@ -91,7 +128,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 3)
+    else if((v == 3) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-3");
 
@@ -131,7 +168,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 4)
+    else if((v == 4) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-4");
 
@@ -171,7 +208,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 5)
+    else if((v == 5) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-5");
 
@@ -211,7 +248,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 6)
+    else if((v == 6) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-6");
 
@@ -251,7 +288,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 7)
+    else if((v == 7) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-7");
 
@@ -291,7 +328,7 @@ function calcul(v) {
             }
         }
     }
-    else if(v == 8)
+    else if((v == 8) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-8");
 
@@ -331,7 +368,7 @@ function calcul(v) {
             }
         }
     }
-    else if (v == 9)
+    else if ((v == 9) && (victorie == 0))
     {
         var messageEl = document.getElementById("message-el-9");
 
