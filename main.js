@@ -267,7 +267,7 @@ function calcul(v) {
                 if (((c[4] == c[5]) && (c[4] == c[6])) || ((c[3] == c[6]) && (c[3] == c[9])))
                 {
                     victorie = 1;
-                    message = "O e castigatorul suprem!";
+                    message = "X e castigatorul suprem!";
                 }
             }
             else
