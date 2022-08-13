@@ -10,11 +10,11 @@ body{
     color:rgb(205, 136, 46);
     border: none;
     border-radius: 2px;
-    width:107px;
-    height:107px;
+    width:100px;
+    height:100px;
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .button {
