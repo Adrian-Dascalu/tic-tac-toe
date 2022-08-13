@@ -100,6 +100,7 @@ function calcul(v) {
 
             if (((c[1] == c[2]) && (c[1] == c[3]) && (c[1] != 0)) || ((c[4] == c[5]) && (c[4] == c[6]) && (c[4] != 0)) || ((c[7] == c[8]) && (c[7] == c[9]) && (c[7] != 0)) || ((c[1] == c[4]) && (c[1] == c[7]) && (c[1] != 0)) || ((c[2] == c[5]) && (c[2] == c[8]) && (c[2] != 0)) || ((c[3] == c[6]) && (c[3] == c[9]) && (c[3] != 0)) || ((c[1] == c[5]) && (c[1] == c[9]) && (c[1] != 0)) || ((c[3] == c[5]) && (c[3] == c[7]) && (c[3] != 0))) {
                 victorie = 1;
+                
                 if (numar == 0) {
                     message = "O e castigatorul suprem!";
                 }
@@ -114,5 +115,18 @@ function calcul(v) {
         messageEl = document.getElementById("message-e");
 
         messageEl.textContent = message;
+    }
+    else {
+        for(i = 1; i <= 10; i++) {
+            if (c[i] == 0) {
+                break;
+            }
+            else if (i == 10) {
+                messageEl = document.getElementById("message-e");
+
+                messageEl.textContent = "Egalitatee!!";
+            }
+
+        }
     }
 }
