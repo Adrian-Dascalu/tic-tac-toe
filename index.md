@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-**[apasa](https://goldfusion1.github.io/we/firstpage)**
+**[apasa pentru x si 0](https://goldfusion1.github.io/we/firstpage)**
 
 You can use the [editor on GitHub](https://github.com/GoldFusion1/we/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
