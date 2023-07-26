@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-**[apasa pentru x si 0](https://adrian-dascalu.github.io/tic-tac-toe/firstpage)**
+**[click here for tic tac toe](https://adrian-dascalu.github.io/tic-tac-toe/firstpage)**
 
 You can use the [editor on GitHub](https://github.com/adrian-dascalu/tic-tac-toe/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 

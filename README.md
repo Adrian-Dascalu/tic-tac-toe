@@ -1,2 +1,2 @@
-# x-si-0 link accesare site:
+# tic tac toe link site:
 https://adrian-dascalu.github.io/tic-tac-toe/firstpage 

@@ -1,6 +1,6 @@
-let numar = 0;
+let turn = 0;
 
-let victorie = 0;
+let win = 0;
 
 let message = "";
 
@@ -11,10 +11,10 @@ var messaget = document.getElementById("message-t");
 messaget.textContent = "X turn";
 
 function restart() {
-    victorie = 0;
+    win = 0;
     c = [0,0,0,0,0,0,0,0,0,0];
     messaget.textContent = "X turn";
-    numar = 0;
+    turn = 0;
     
     messageEl = document.getElementById("message-e");
     messageEl.textContent = "";
@@ -48,7 +48,7 @@ function restart() {
 }
 
 function calcul(v) {
-    if (victorie == 0) {
+    if (win == 0) {
         if (v == 1) {
             var messageEl = document.getElementById("message-el-1");
         }
@@ -79,10 +79,10 @@ function calcul(v) {
 
         if (c[v] == 0)
         {
-            if (numar == 0) {
+            if (turn == 0) {
                 messageEl.textContent = "X";
 
-                numar = 1;
+                turn = 1;
 
                 c[v] = 1;
 
@@ -91,7 +91,7 @@ function calcul(v) {
             else {
                 messageEl.textContent = "O";
 
-                numar = 0;
+                turn = 0;
 
                 c[v] = 2;
 
@@ -99,21 +99,21 @@ function calcul(v) {
             }
 
             if (((c[1] == c[2]) && (c[1] == c[3]) && (c[1] != 0)) || ((c[4] == c[5]) && (c[4] == c[6]) && (c[4] != 0)) || ((c[7] == c[8]) && (c[7] == c[9]) && (c[7] != 0)) || ((c[1] == c[4]) && (c[1] == c[7]) && (c[1] != 0)) || ((c[2] == c[5]) && (c[2] == c[8]) && (c[2] != 0)) || ((c[3] == c[6]) && (c[3] == c[9]) && (c[3] != 0)) || ((c[1] == c[5]) && (c[1] == c[9]) && (c[1] != 0)) || ((c[3] == c[5]) && (c[3] == c[7]) && (c[3] != 0))) {
-                victorie = 1;
+                win = 1;
                 
-                if (numar == 0) {
-                    message = "O e castigatorul suprem!";
+                if (turn == 0) {
+                    message = "O is the great chicken winner!";
                     messaget.textContent = "End";
                 }
                 else {
-                    message = "X e castigatorul suprem!";
+                    message = "X is the great chicken winner!";
                     messaget.textContent = "End";
                 }
             }
         }
     }
 
-    if (victorie == 1) {
+    if (win == 1) {
         messageEl = document.getElementById("message-e");
 
         messageEl.textContent = message;
@@ -126,7 +126,8 @@ function calcul(v) {
             else if (i == 10) {
                 messageEl = document.getElementById("message-e");
 
-                messageEl.textContent = "Egalitatee!!";
+                messageEl.textContent = "Liberte, Egalite, Incendie!!!";
+                messaget.textContent = "End";
             }
 
         }
