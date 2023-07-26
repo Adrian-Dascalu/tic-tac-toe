@@ -2,121 +2,121 @@ let turn = 0;
 
 let win = 0;
 
-let message = "";
+let text_result = "";
 
 var c = [0,0,0,0,0,0,0,0,0,0];
 
-var messaget = document.getElementById("message-t");
+var text_turn = document.getElementById("text-turn");
 
-messaget.textContent = "X turn";
+text_turn.textContent = "X turn";
 
 function restart() {
     win = 0;
     c = [0,0,0,0,0,0,0,0,0,0];
-    messaget.textContent = "X turn";
+    text_turn.textContent = "X turn";
     turn = 0;
     
-    messageEl = document.getElementById("message-e");
-    messageEl.textContent = "";
+    text_match_result = document.getElementById("result");
+    text_match_result.textContent = "";
 
-    messageEl = document.getElementById("message-el-1");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-1");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-2");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-2");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-3");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-3");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-4");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-4");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-5");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-5");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-6");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-6");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-7");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-7");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-8");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-8");
+    text_box.textContent = "";
 
-    messageEl = document.getElementById("message-el-9");
-    messageEl.textContent = "";
+    text_box = document.getElementById("box-9");
+    text_box.textContent = "";
 }
 
 function calcul(v) {
     if (win == 0) {
         if (v == 1) {
-            var messageEl = document.getElementById("message-el-1");
+            var text_box = document.getElementById("box-1");
         }
         else if (v == 2) {
-            var messageEl = document.getElementById("message-el-2");
+            var text_box = document.getElementById("box-2");
         }
         else if (v == 3) {
-            var messageEl = document.getElementById("message-el-3");
+            var text_box = document.getElementById("box-3");
         }
         else if (v == 4) {
-            var messageEl = document.getElementById("message-el-4");
+            var text_box = document.getElementById("box-4");
         }
         else if (v == 5) {
-            var messageEl = document.getElementById("message-el-5");
+            var text_box = document.getElementById("box-5");
         }
         else if (v == 6) {
-            var messageEl = document.getElementById("message-el-6");
+            var text_box = document.getElementById("box-6");
         }
         else if (v == 7) {
-            var messageEl = document.getElementById("message-el-7");
+            var text_box = document.getElementById("box-7");
         }
         else if (v == 8) {
-            var messageEl = document.getElementById("message-el-8");
+            var text_box = document.getElementById("box-8");
         }
         else if (v == 9) {
-            var messageEl = document.getElementById("message-el-9");
+            var text_box = document.getElementById("box-9");
         }
 
         if (c[v] == 0)
         {
             if (turn == 0) {
-                messageEl.textContent = "X";
+                text_box.textContent = "X";
 
                 turn = 1;
 
                 c[v] = 1;
 
-                messaget.textContent = "O turn";
+                text_turn.textContent = "O turn";
             }
             else {
-                messageEl.textContent = "O";
+                text_box.textContent = "O";
 
                 turn = 0;
 
                 c[v] = 2;
 
-                messaget.textContent = "X turn"
+                text_turn.textContent = "X turn"
             }
 
             if (((c[1] == c[2]) && (c[1] == c[3]) && (c[1] != 0)) || ((c[4] == c[5]) && (c[4] == c[6]) && (c[4] != 0)) || ((c[7] == c[8]) && (c[7] == c[9]) && (c[7] != 0)) || ((c[1] == c[4]) && (c[1] == c[7]) && (c[1] != 0)) || ((c[2] == c[5]) && (c[2] == c[8]) && (c[2] != 0)) || ((c[3] == c[6]) && (c[3] == c[9]) && (c[3] != 0)) || ((c[1] == c[5]) && (c[1] == c[9]) && (c[1] != 0)) || ((c[3] == c[5]) && (c[3] == c[7]) && (c[3] != 0))) {
                 win = 1;
                 
                 if (turn == 0) {
-                    message = "O is the great chicken winner!";
-                    messaget.textContent = "End";
+                    text_result = "O is the great chicken winner!";
+                    text_turn.textContent = "End";
                 }
                 else {
-                    message = "X is the great chicken winner!";
-                    messaget.textContent = "End";
+                    text_result = "X is the great chicken winner!";
+                    text_turn.textContent = "End";
                 }
             }
         }
     }
 
     if (win == 1) {
-        messageEl = document.getElementById("message-e");
+        text_match_result = document.getElementById("result");
 
-        messageEl.textContent = message;
+        text_match_result.textContent = text_result;
     }
     else {
         for(i = 1; i <= 10; i++) {
@@ -124,12 +124,11 @@ function calcul(v) {
                 break;
             }
             else if (i == 10) {
-                messageEl = document.getElementById("message-e");
+                text_box = document.getElementById("result");
 
-                messageEl.textContent = "Liberte, Egalite, Incendie!!!";
-                messaget.textContent = "End";
+                text_match_result.textContent = "Liberte, Egalite, Incendie!!!";
+                text_turn.textContent = "End";
             }
-
         }
     }
 }

@@ -39,56 +39,52 @@ main{
     height: 60px;
 }
 
-#message-el {
-    
-}
-
-#message-e {
+#result {
     font-size: 25px;
     text-align: center;
     margin-top: auto;
     padding-top: 15px;
 }
 
-#message-t {
+#text-turn {
     font-size: 64px;
     text-align: center;
     margin-top: auto;
     padding-top: 5px;
 }
 
-#message-el-1 {
+#box-1 {
     font-size: 32px;
 }
 
-#message-el-2 {
+#box-2 {
     font-size: 32px;
 }
 
-#message-el-3 {
+#box-3 {
     font-size: 32px;
 }
 
-#message-el-4 {
+#box-4 {
     font-size: 32px;
 }
 
-#message-el-5 {
+#box-5 {
     font-size: 32px;
 }
 
-#message-el-6 {
+#box-6 {
     font-size: 32px;
 }
 
-#message-el-7 {
+#box-7 {
     font-size: 32px;
 }
 
-#message-el-8 {
+#box-8 {
     font-size: 32px;
 }
 
-#message-el-9 {
+#box-9 {
     font-size: 32px;
 }
