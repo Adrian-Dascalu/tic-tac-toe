@@ -103,9 +103,11 @@ function calcul(v) {
                 
                 if (numar == 0) {
                     message = "O e castigatorul suprem!";
+                    messaget.textContent = "End";
                 }
                 else {
                     message = "X e castigatorul suprem!";
+                    messaget.textContent = "End";
                 }
             }
         }
