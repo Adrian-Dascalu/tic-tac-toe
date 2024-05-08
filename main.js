@@ -10,6 +10,11 @@ var text_turn = document.getElementById("text-turn");
 
 text_turn.textContent = "X turn";
 
+let turnslogx = [];
+let turnslogo = [];
+
+var text_box;
+
 function restart() {
     win = 0;
     c = [0,0,0,0,0,0,0,0,0,0];
@@ -19,63 +24,83 @@ function restart() {
     text_match_result = document.getElementById("result");
     text_match_result.textContent = "";
 
-    text_box = document.getElementById("box-1");
+    for(i = 1; i <= 9; i++) {
+        text_box = document.getElementById("box-" + i);
+        text_box.textContent = "";
+
+        text_box = document.getElementById("box2-" + i);
+        text_box.textContent = "";
+    }
+
+    text_box = document.getElementById("box1-" + turnslogo[0]);
     text_box.textContent = "";
 
-    text_box = document.getElementById("box-2");
+    text_box = document.getElementById("box1-" + turnslogx[0]);
     text_box.textContent = "";
+    
+    turnslogx = [];
+    turnslogo = [];
+}
 
-    text_box = document.getElementById("box-3");
-    text_box.textContent = "";
+function check3turns(x) {
+    if(x == 0) {
+        if(turnslogo.length > 3) {
+            c[turnslogo[0]] = 0;
 
-    text_box = document.getElementById("box-4");
-    text_box.textContent = "";
+            text_box = document.getElementById("box-" + turnslogo[0]);
+            text_box.textContent = "";
 
-    text_box = document.getElementById("box-5");
-    text_box.textContent = "";
+            text_box = document.getElementById("box1-" + turnslogo[0]);
+            text_box.textContent = "";
 
-    text_box = document.getElementById("box-6");
-    text_box.textContent = "";
+            turnslogo.shift();     
 
-    text_box = document.getElementById("box-7");
-    text_box.textContent = "";
+            text_box = document.getElementById("box-" + turnslogo[0]);
+            text_box.textContent = "";
+            
+            text_box = document.getElementById("box1-" + turnslogo[0]);
+            text_box.textContent = "O";
+        }
+        else if(turnslogo.length == 3) {
+            text_box = document.getElementById("box-" + turnslogo[0]);
+            text_box.textContent = "";
 
-    text_box = document.getElementById("box-8");
-    text_box.textContent = "";
+            text_box = document.getElementById("box1-" + turnslogo[0]);
+            text_box.textContent = "O";
+        }
+    }
+    else {
+        if(turnslogx.length > 3) {
+            c[turnslogx[0]] = 0;
 
-    text_box = document.getElementById("box-9");
-    text_box.textContent = "";
+            text_box = document.getElementById("box-" + turnslogx[0]);
+            text_box.textContent = "";
+            
+            text_box = document.getElementById("box1-" + turnslogx[0]);
+            text_box.textContent = "";
+
+            turnslogx.shift();
+
+            text_box = document.getElementById("box-" + turnslogx[0]);
+            text_box.textContent = "";
+
+            text_box = document.getElementById("box1-" + turnslogx[0]);
+            text_box.textContent = "X";
+        }
+        else if(turnslogx.length == 3) {
+            text_box = document.getElementById("box-" + turnslogx[0]);
+            text_box.textContent = "";
+
+            text_box = document.getElementById("box1-" + turnslogx[0]);
+            text_box.textContent = "X";
+        }
+    }
 }
 
 function calcul(v) {
     if (win == 0) {
-        if (v == 1) {
-            var text_box = document.getElementById("box-1");
-        }
-        else if (v == 2) {
-            var text_box = document.getElementById("box-2");
-        }
-        else if (v == 3) {
-            var text_box = document.getElementById("box-3");
-        }
-        else if (v == 4) {
-            var text_box = document.getElementById("box-4");
-        }
-        else if (v == 5) {
-            var text_box = document.getElementById("box-5");
-        }
-        else if (v == 6) {
-            var text_box = document.getElementById("box-6");
-        }
-        else if (v == 7) {
-            var text_box = document.getElementById("box-7");
-        }
-        else if (v == 8) {
-            var text_box = document.getElementById("box-8");
-        }
-        else if (v == 9) {
-            var text_box = document.getElementById("box-9");
-        }
+       
+        text_box = document.getElementById("box-" + v);
 
         if (c[v] == 0)
         {
@@ -87,6 +112,10 @@ function calcul(v) {
                 c[v] = 1;
 
                 text_turn.textContent = "O turn";
+
+                turnslogx.push(v);
+
+                check3turns(1);
             }
             else {
                 text_box.textContent = "O";
@@ -95,19 +124,53 @@ function calcul(v) {
 
                 c[v] = 2;
 
-                text_turn.textContent = "X turn"
+                text_turn.textContent = "X turn";
+
+                turnslogo.push(v);
+
+                check3turns(0);
             }
 
-            if (((c[1] == c[2]) && (c[1] == c[3]) && (c[1] != 0)) || ((c[4] == c[5]) && (c[4] == c[6]) && (c[4] != 0)) || ((c[7] == c[8]) && (c[7] == c[9]) && (c[7] != 0)) || ((c[1] == c[4]) && (c[1] == c[7]) && (c[1] != 0)) || ((c[2] == c[5]) && (c[2] == c[8]) && (c[2] != 0)) || ((c[3] == c[6]) && (c[3] == c[9]) && (c[3] != 0)) || ((c[1] == c[5]) && (c[1] == c[9]) && (c[1] != 0)) || ((c[3] == c[5]) && (c[3] == c[7]) && (c[3] != 0))) {
+            if (((c[1] == c[2]) && (c[1] == c[3]) && (c[1] != 0)) || ((c[4] == c[5]) && (c[4] == c[6]) && (c[4] != 0)) ||
+                ((c[7] == c[8]) && (c[7] == c[9]) && (c[7] != 0)) || ((c[1] == c[4]) && (c[1] == c[7]) && (c[1] != 0)) ||
+                ((c[2] == c[5]) && (c[2] == c[8]) && (c[2] != 0)) || ((c[3] == c[6]) && (c[3] == c[9]) && (c[3] != 0)) ||
+                ((c[1] == c[5]) && (c[1] == c[9]) && (c[1] != 0)) || ((c[3] == c[5]) && (c[3] == c[7]) && (c[3] != 0))) {
+                
                 win = 1;
                 
                 if (turn == 0) {
                     text_result = "O is the great chicken winner!";
                     text_turn.textContent = "End";
+
+                    for(i = 1; i <= 9; i++) {
+                        if(c[i] == 2) {
+                            text_box = document.getElementById("box-" + i);
+                            text_box.textContent = "";
+
+                            text_box = document.getElementById("box1-" + i);
+                            text_box.textContent = "";
+
+                            text_box = document.getElementById("box2-" + i);
+                            text_box.textContent = "O";
+                        }
+                    }
                 }
                 else {
                     text_result = "X is the great chicken winner!";
                     text_turn.textContent = "End";
+
+                    for(i = 1; i <= 9; i++) {
+                        if(c[i] == 1) {
+                            text_box = document.getElementById("box-" + i);
+                            text_box.textContent = "";
+
+                            text_box = document.getElementById("box1-" + i);
+                            text_box.textContent = "";
+
+                            text_box = document.getElementById("box2-" + i);
+                            text_box.textContent = "X";
+                        }
+                    }
                 }
             }
         }
@@ -117,18 +180,5 @@ function calcul(v) {
         text_match_result = document.getElementById("result");
 
         text_match_result.textContent = text_result;
-    }
-    else {
-        for(i = 1; i <= 10; i++) {
-            if (c[i] == 0) {
-                break;
-            }
-            else if (i == 10) {
-                text_box = document.getElementById("result");
-
-                text_match_result.textContent = "Liberte, Egalite, Incendie!!!";
-                text_turn.textContent = "End";
-            }
-        }
     }
 }

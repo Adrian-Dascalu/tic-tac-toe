@@ -20,6 +20,22 @@ h1 {
     font-size: 32px;
 }
 
+.disappearing {
+    font-size: 32px;
+    vertical-align: auto;
+    color: rgba(205, 136, 46, 0.582);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.winning-line {
+    font-size: 32px;
+    vertical-align: auto;
+    color: rgba(201, 45, 24);
+    text-align: center;
+    margin-top: -3px;
+}
+
 .button-1 {
     background-color: aquamarine;
     color:rgb(205, 136, 46);
@@ -46,6 +62,7 @@ h1 {
 }
 
 .button-1:active {
+    transform: translateY(1px);
     -webkit-transform: translateY(1px);
 }
 
@@ -74,6 +91,7 @@ h1 {
 }
 
 .button:active {
+    transform: translateY(1px);
     -webkit-transform: translateY(1px);
 }
 
